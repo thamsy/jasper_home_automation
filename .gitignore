@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Secret stuff
+secret.py
+main.py-oauth2.json
+client_secret.json
+
+# IDE
+.idea/*
+
