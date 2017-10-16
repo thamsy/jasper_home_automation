@@ -46,4 +46,8 @@ python main.py
 ## Troubleshoot
 **Q: There is no music coming out from the speakers.**
 
-A: You may need to change the raspi-config to detect your speakers. To do so you need `ssh` into your raspi-pi, go to `sudo raspi-config`, then `Advanced`, then `Audio` and choose the right audio feed. 
+A: You may need to change the raspi-config to detect your speakers. To do so you need `ssh` into your raspi-pi, go to `sudo raspi-config`, then `Advanced`, then `Audio` and choose the right audio feed.
+
+**Q: I can't quite the application**
+
+A: Try `Ctrl-backslash`
