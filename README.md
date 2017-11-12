@@ -48,6 +48,6 @@ python main.py
 
 A: You may need to change the raspi-config to detect your speakers. To do so you need `ssh` into your raspi-pi, go to `sudo raspi-config`, then `Advanced`, then `Audio` and choose the right audio feed.
 
-**Q: I can't quite the application**
+**Q: I can't quit the application**
 
 A: Try `Ctrl-backslash`
