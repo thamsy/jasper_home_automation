@@ -43,12 +43,13 @@ def music_controls(bot, update):
 
     play_button = telegram.InlineKeyboardButton("Play", callback_data="play")
     pause_button = telegram.InlineKeyboardButton("Pause", callback_data="pause")
+    replay_button = telegram.InlineKeyboardButton("Replay", callback_data="replay")
     vol0_button = telegram.InlineKeyboardButton("Vol 0%", callback_data="vol0")
     vol25_button = telegram.InlineKeyboardButton("25%", callback_data="vol25")
     vol50_button = telegram.InlineKeyboardButton("50%", callback_data="vol50")
     vol75_button = telegram.InlineKeyboardButton("75%", callback_data="vol75")
     vol100_button = telegram.InlineKeyboardButton("100%", callback_data="vol100")
-    inline_keyboard = [[play_button, pause_button], [vol0_button, vol25_button, vol50_button, vol75_button, vol100_button]]
+    inline_keyboard = [[play_button, pause_button, replay_button], [vol0_button, vol25_button, vol50_button, vol75_button, vol100_button]]
     inline_keyboard_markup = telegram.InlineKeyboardMarkup(inline_keyboard)
     bot.send_message(chat_id=update.message.chat_id, text="Music Controls",
                      reply_markup=inline_keyboard_markup)
@@ -63,6 +64,8 @@ def music_controller(bot, update):
         commands.resume()
     elif control == "pause":
         commands.pause()
+    elif control == "replay":
+        commands.replay()
     elif control == "vol0":
         commands.vol(0)
     elif control == "vol25":
@@ -77,6 +80,8 @@ def music_controller(bot, update):
         logging.warn("Call back handler not implemented")
 
     bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=update.callback_query.data)
+
+
 
 
 
